@@ -137,7 +137,7 @@
 
 // Enable Unified Move Menu
 // Move, Home, Extrude, ABL at one Place and bring Gcode Menu on Home Menu
-//#define UNIFIED_MENU
+#define UNIFIED_MENU
 
 /**
  * Enable list mode in Files menu and settings menu
@@ -195,12 +195,12 @@
  */
 #define CUSTOM_0_LABEL "Restore EEPROM"
 #define CUSTOM_0_GCODE "M501\n"
-//#define CUSTOM_1_LABEL "Custom2"
-//#define CUSTOM_1_GCODE "M105\n"
-//#define CUSTOM_2_LABEL "Custom2"
-//#define CUSTOM_2_GCODE "M105\n"
-//#define CUSTOM_3_LABEL "Custom3"
-//#define CUSTOM_3_GCODE "M105\n"
+#define CUSTOM_1_LABEL "Disable Steppers"
+#define CUSTOM_1_GCODE "M84\n"
+#define CUSTOM_2_LABEL "init SD Card"
+#define CUSTOM_2_GCODE "M21\n"
+#define CUSTOM_3_LABEL "Release Sd Card"
+#define CUSTOM_3_GCODE "M22\n"
 //#define CUSTOM_4_LABEL "Custom4"
 //#define CUSTOM_4_GCODE "M105\n"
 //#define CUSTOM_5_LABEL "Custom5"
