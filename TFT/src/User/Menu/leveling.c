@@ -6,9 +6,15 @@ const MENUITEMS autoLevelingItems = {
 LABEL_ABL,
 // icon                        label
  {{ICON_LEVELING,              LABEL_ABL},
+ #ifdef DELTA_PRINTER
+  {ICON_DELTA_CALIBRATION,    LABEL_DELTA_CALIBRATION},
+  {ICON_EEPROM_SAVE,          LABEL_EEPROM_SAVE},
+  {ICON_BACKGROUND,           LABEL_BACKGROUND},
+ #else
   {ICON_BLTOUCH_DEPLOY,        LABEL_BLTOUCH_DEPLOY},
   {ICON_BLTOUCH_STOW,          LABEL_BLTOUCH_STOW},
   {ICON_BLTOUCH_TEST,          LABEL_BLTOUCH_TEST},
+#endif
   {ICON_BLTOUCH_REPEAT,        LABEL_BLTOUCH_REPEAT},
   {ICON_PROBE_OFFSET,          LABEL_Z_OFFSET},
   {ICON_BABYSTEP,              LABEL_BABYSTEP},
@@ -32,13 +38,21 @@ void menuAutoLeveling(void)
         }
         break;
       case KEY_ICON_1:
+      #ifdef DELTA_PRINTER
+        storeCmd("G33\n");
+      #else
         storeCmd("M280 P0 S10\n");
+      #endif
         break;
       case KEY_ICON_2:
+#ifndef DELTA_PRINTER         
         storeCmd("M280 P0 S90\n");
+#endif
         break;
       case KEY_ICON_3:
+#ifndef DELTA_PRINTER         
         storeCmd("M280 P0 S120\n");
+#endif
         break;
       case KEY_ICON_4:
         storeCmd("G28\n");

@@ -184,5 +184,6 @@
     #define RU_300_SECONDS            "5 мин."
     #define RU_CUSTOM_SECONDS         "Своё"
     #define RU_ST7920_FULLSCREEN      "Marlin на весь экран"
+    #define RU_DELTA_CALIBRATION      "Delta"
 
 #endif

@@ -75,7 +75,7 @@
  *  Options:  0: Disabled. RECOMMENDED FOR TFT24
  *            1: Enabled Marlin Fullscreen mode.
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
+#define DEFAULT_ST7920_FULLSCREEN_MODE 1 // 0: Disabled. RECOMMENDED FOR TFT24
 
 /**
  * Clean Mode Switching Support
@@ -101,7 +101,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 /**
  * Default Touch Mode Language
@@ -115,7 +115,7 @@
 /**
  *  Show bootscreen when starting up
  */
-#define SHOW_BTT_BOOTSCREEN
+//#define SHOW_BTT_BOOTSCREEN
 
 /**
  * The duration and frequency for the UI feedback sound.
@@ -177,15 +177,15 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define X_MAX_POS 260
+#define Y_MAX_POS 260
+#define Z_MAX_POS 360
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
 #define NOZZLE_RESUME_PURGE_LENGTH  16   // (mm)
-#define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 10)  // (mm) Must be an integer
-#define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 10)  // (mm) Must be an integer
+#define NOZZLE_PAUSE_X_POSITION     (0)  // (mm) Must be an integer
+#define NOZZLE_PAUSE_Y_POSITION     (0)  // (mm) Must be an integer
 #define NOZZLE_PAUSE_Z_RAISE        20   // (mm)
 #define NOZZLE_PAUSE_E_FEEDRATE     6000 // (mm/min) retract & purge feedrate
 #define NOZZLE_PAUSE_XY_FEEDRATE    6000 // (mm/min) X and Y axes feedrate
@@ -234,6 +234,10 @@
 // Enable Unified Move Menu
 // Move, Home, Extrude, ABL at one Place and bring G-code Menu on Home Menu
 #define UNIFIED_MENU
+
+
+//Add delta calibration button but remove bltous test commands from UBL menu
+#define DELTA_PRINTER
 
 /**
  * SD support

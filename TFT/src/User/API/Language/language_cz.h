@@ -184,5 +184,6 @@
     #define CZ_300_SECONDS              "5 Min."
     #define CZ_CUSTOM_SECONDS           "Custom"
     #define CZ_ST7920_FULLSCREEN        "Marlin mode in fullscreen"
+    #define CZ_DELTA_CALIBRATION        "Delta"
 
 #endif
